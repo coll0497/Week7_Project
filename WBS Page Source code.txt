@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/Content/themes/base/css?v=Pva8qOyTmFAXqwasR8MUvkgVGt5M70iSYhfF2lnwRog1" rel="stylesheet"/>
+<link href="/Content/css?v=8lgBtzdWV54Z2_5jAl_9pBcdrMy31Ase7zrbGw93XeY1" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v=K-FFpFNtIXPUlQamnX3qHX_A5r7TM2xbAgcuEmpm3O41"></script>
+
+    <script src="/bundles/jquery?v=b9zA0pR2CFnxVK51BSul1QRTE99baU_0pRBphizDhzA1"></script>
+
+    <script src="/bundles/jqueryval?v=kO9SZjRLUEvNZbFlwaT1hsJ0t0ngQHk32HeNdumCbRM1"></script>
+
+    <script src="/bundles/jquerymobile?v=gUY_A4RvDKsSAMy5J5fW9rI70G_eoVfPKPBtu20GoEA1"></script>
+
+
+    
+
+    <script>
+            //The echelon.config.js file will navigate to this url when a 401 error is returned by ajax calls.
+            var g_login_page = "/login";
+    </script>
+</head>
+<body>
+    <div id="Search" data-role="page" data-theme="a">
+
+        <div data-role="panel" id="help-panel" data-position-fixed="true">
+            <h1>Help</h1>
+            <div class="help-panel-content">
+                There is currently no help available for this topic.
+            </div>
+        </div>
+
+
+    
+<div data-role="header" data-position="fixed" id="main-header" data-theme="b">
+    <h1><a class="header-link" href="/home">Search</a> - Reynaldo Serrano</h1>
+    <a href="#" class="ui-btn ui-button-left ui-corner-all ui-icon-arrow-l ui-btn-icon-left" data-rel="back" title="Go back">Back</a>
+    <a class="ui-btn ui-corner-all ui-icon-power ui-btn-icon-right ui-btn-right" href="/Logout">Logout</a>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li><a class="ui-btn" data-icon="search" href="/">Search</a></li>
+            <li><a class="ui-btn" data-icon="calendar" href="/Schedule">Schedule</a></li>
+            <li><a class="ui-btn" data-icon="user" href="/TerritoryManager">TMA</a></li>
+            <li><a class="ui-btn" data-icon="gear" href="/TerritoryManager/Dashboard">Dashboard</a></li>
+            <li><a class="ui-btn" data-icon="tag" href="/ServiceRequest/Tracker">Service Request Tracker</a></li>
+        </ul>
+    </div>
+</div>
+
+        <div class="ui-content" role="main">
+            
+
+
+<ul data-role="listview" data-inset="true" data-theme="a">
+    <li><a href="/Search/Address">Address Search</a></li>
+    <li><a href="/Search/Order">Order Search</a></li>
+    <li><a href="/Search/Technician">Technician Search</a></li>
+    <li><a href="/Search/ProductInstallation">Product Search</a></li>
+</ul>
+
+        </div>
+
+
+        <div data-role="popup" id="networkStatusPanel" data-dismissible="false" data-theme="a" data-overlay-theme="b">
+            <h1>Network Connection Lost</h1>
+            <p>
+                We are unable to detect a network connection at this time. You will not be able to use this application
+                until a network connection is re-established.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $(window).on('offline', function () {
+                $('#networkStatusPanel').popup("open");
+            });
+
+            $(window).on('online', function () {
+                $('#networkStatusPanel').popup("close");
+            });
+
+        });
+    </script>
+
+    
+</body>
+</html>
