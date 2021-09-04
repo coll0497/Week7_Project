@@ -1,10 +1,17 @@
 
-// need to add function so results display on webpage
-// weather may not display as table... reformat as necessary
-// see HTML lines 11-21 for Check Weather function
+// line 9 weather.<condition name> not reading right
+// reference https://w3collective.com/fetch-display-api-data-javascript/
 
-var tableBody = document.getElementById('weather-table');
 var fetchButton = document.getElementById('fetch-button');
+
+function displayWeather(data) {
+    const weather = data.current[0];
+    const weatherDiv = document.getElementById("weather");
+    const weatherFeel = weather.cloud;
+    const heading = document.createElement("h3");
+    heading.innerHTML = weatherFeel;
+    weatherDiv.appendChild(heading);
+}
 
 function getApi() {
   // fetch request gets a list of all the repos for the node.js organization
@@ -20,6 +27,7 @@ function getApi() {
       .then(function (data) {
         console.log(data);
       });
+
 }
 
 fetchButton.addEventListener('click', getApi);
