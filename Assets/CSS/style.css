@@ -56,3 +56,16 @@ button:hover{
 margin-top: .3rem;
 vertical-align: -6px;
 }
+
+header{
+    font: bolder;
+    text-align: center;
+}
+
+header h1{
+    font-size: 60px;
+}
+
+header h3{
+    font-size: 30px;
+}
