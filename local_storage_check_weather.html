@@ -5,51 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./local_storage.css" />
-    <title>Gradebook</title>
+    <title>Check Weather</title>
   </head>
   <body>
-    <div class="text-center pt-4">
-        <button class="btn btn-danger" id="fetch-button">
+    <div>
+        <button id="fetch-button">
           Check Weather
         </button>
-    </div>
-      <table class="card-body table mx-auto my-4">
-        <th>
-          <p class="my-4"></p>
-        </th>
-        <tbody id="weather-table" class="mx-auto text-center"></tbody>
-      </table>
-    <div class="card">
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+          </div>
+        </div>
+    <div>
+          <p id="current"></p>
+          <p id="forecast"></p>
+        </div>
+      <br>
+      <br>
+    <section class="submit-project">
       <h2>Enter a Project</h2>
       <form>
-        <ul>
-          <li>
-            <label for="project">Project</label>
+          <label for="project">Project</label>
             <select id="project-names">
               <option value="Project1">Project 1</option>
               <option value="Project2">Project 2</option>
               <option value="Project3">Project 3</option>
               <option value="Project4">Project 4</option>
             </select>
-          </li>
-          <li>
             <label for="status">Status</label>
-            <select id="status">
-              <option value="Complete">Complete</option>
-              <option value="Delayed">Delayed</option>
-              <option value="Waiting">Waiting to be Installed</option>
-              <option value="In-Progress">In Progress</option>
+            <select id="set-status">
+              <option value="complete.">Complete</option>
+              <option value="delayed.">Delayed</option>
+              <option value="waiting to be installed.">Waiting to be Installed</option>
+              <option value="in progress.">In Progress</option>
             </select>
-          </li>
-          <li>
             <label for="msg">Comment</label>
             <textarea id="msg" name="comments"></textarea>
-          </li>
-        </ul>
-        <button id="save">SAVE</button>
-      </form> 
-      <h3 class="message"></h3>   
-    
+          <button id="save">SAVE</button>
+        </form> 
+    <h3 class="message"></h3>  
+    </section>
+      <table class="current-projects">
+        <thead>
+          <tr><th id="name">Project Name</th><th id="number">Number</th><th id="start">Start Date</th><th id="status">Status</th></tr>
+        </thead>
+        <tbody>
+          <tr class="row">
+            <td>Project A</td>
+            <td>1</td>
+            <td class=>09/07/2021</td>
+            <td>In progress</td>
+          </tr>
+          <tr class="row"></tr>
+          <tr class="row"></tr>
+          <tr class="row"></tr>
+        </tbody>
     <script src="./local_storage.js"></script>
     <script src="./check_weather.js"></script>
   </body>
