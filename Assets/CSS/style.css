@@ -57,6 +57,11 @@ margin-top: .3rem;
 vertical-align: -6px;
 }
 
+
+.tableContents{
+    text-align: center;
+}
+
 header{
     font: bolder;
     text-align: center;
@@ -68,4 +73,5 @@ header h1{
 
 header h3{
     font-size: 30px;
+
 }
