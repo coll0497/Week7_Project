@@ -59,4 +59,5 @@ vertical-align: -6px;
 
 .tableContents{
     text-align: center;
+    border: 1px solid black;
 }
