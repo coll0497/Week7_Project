@@ -57,7 +57,21 @@ margin-top: .3rem;
 vertical-align: -6px;
 }
 
+
 .tableContents{
     text-align: center;
-    border: 1px solid black;
+}
+
+header{
+    font: bolder;
+    text-align: center;
+}
+
+header h1{
+    font-size: 60px;
+}
+
+header h3{
+    font-size: 30px;
+
 }
