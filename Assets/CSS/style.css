@@ -56,3 +56,7 @@ button:hover{
 margin-top: .3rem;
 vertical-align: -6px;
 }
+
+.tableContents{
+    text-align: center;
+}
