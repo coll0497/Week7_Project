@@ -16,6 +16,10 @@ button{
     background-color: lightblue;
     cursor: pointer;
 }
+#searchBtn{
+    width: 4rem;
+    margin-right: 1rem;
+}
 #project, #schedule, #report, #weather, #search{
     width: 100%;
     height: 2rem;
@@ -60,7 +64,9 @@ a{
 
 #search-bar{
 margin-top: .3rem;
-vertical-align: -6px;
+margin-right: .05rem;
+vertical-align: -1px;
+width: 8rem;
 }
 
 
