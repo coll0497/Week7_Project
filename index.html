@@ -5,24 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Assets/CSS/style.css">
-    <link rel="stylesheet" href="jquery-ui.min.css">
-    <script src="external/jquery/jquery.js"></script>
-    <script src="jquery-ui.min.js"></script>
+   
     <title>Stratum Project Management Application</title>
 
+</head>
+<body>
     <ul id="header-buttons">
 
         <li id="project"><button type="button">Add Project</button></li>
 
-        <li id="schedule"><button type="button">Schedule</button></li>
+        <li id="schedule"><a href="./Schedule/schedule.html" target="_blank"><button type="button">Schedule</button></a></li>
 
-        <li id="report"><button type="button">Report</button></li>
+        <li id="report"><a href="./Report/report.html" target="_blank"><button type="button">Report</button></a></li>
 
         <li id="weather"><button type="button">Weather</button></li>
 
         <li id="search" class=>
-            <label id="search-label">Search</label>
-            <textarea id="search-bar" placeholder="Search..." rows="1"></textarea>
+            <input id="search-bar" placeholder="Project Num/Add..." rows="1"></input>
+            <label for="search-bar" id="search-label"><button id="searchBtn">Search</button></label>
+            
         </li>
 
     </ul>
@@ -56,23 +57,21 @@
 
         </tr>
         <tr class="tableContents">
-            <td class="columnOne"></td>
+            <td class="columnOne"><a href="#"></a></td>
 
-            <td class="columnTwo"></td>
+            <td class="columnTwo"><a href="#"></a></a></td>
 
-            <td class="columnThree"></td>
+            <td class="columnThree"><a href="#"></a></td>
 
-            <td class="columnFour"></td>
+            <td class="columnFour"><a href="#"></a></td>
 
-            <td class="columnFive"></td>
+            <td class="columnFive"><a href="#"></a></td>
 
-            <td class="columnSix"></td>
+            <td class="columnSix"><a href="#"></a></td>
         </tr>
 
     </table>
+    <script src="./assets/JavaScript/script.js"> </script>
 
-</head>
-<body>
-    
 </body>
 </html>
