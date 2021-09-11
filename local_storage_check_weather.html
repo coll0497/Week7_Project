@@ -4,64 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./local_storage.css" />
+    <!-- maps api src below -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jquery modal 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+    <!-- bulma modal src below -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./modal.css">
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>Check Weather</title>
   </head>
   <body>
     <div>
-        <button id="fetch-button">
-          Check Weather
-        </button>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
+
+      <div class="modal-content">
+
+<!-- weather modal here, in lieu of check weather button above -->
+      <div id="modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <article class="media">
+              <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">The weather forecast for today and tomorrow is...</p>
+                    <button class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <p id="today"></p>
+                    <p id="current"></p>
+                    <p id="tomorrow"></p>
+                    <p id="forecast"></p>
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button is-danger">Cancel</button>
+                    <button class="modal-close is-large" aria-label="close"></button>
+                  </footer>
+                </div>
+              </div>
+            </div>
+            </article>
           </div>
         </div>
+        
+      </div>
+      <button class="button is-link is-large" id="launchModal">Check Weather with Modal</button>
+      <br><br>
+
+
     <div>
-          <p id="current"></p>
-          <p id="forecast"></p>
-        </div>
-      <br>
-      <br>
-    <section class="submit-project">
-      <h2>Enter a Project</h2>
-      <form>
-          <label for="project">Project</label>
-            <select id="project-names">
-              <option value="Project1">Project 1</option>
-              <option value="Project2">Project 2</option>
-              <option value="Project3">Project 3</option>
-              <option value="Project4">Project 4</option>
-            </select>
-            <label for="status">Status</label>
-            <select id="set-status">
-              <option value="complete.">Complete</option>
-              <option value="delayed.">Delayed</option>
-              <option value="waiting to be installed.">Waiting to be Installed</option>
-              <option value="in progress.">In Progress</option>
-            </select>
-            <label for="msg">Comment</label>
-            <textarea id="msg" name="comments"></textarea>
-          <button id="save">SAVE</button>
-        </form> 
-    <h3 class="message"></h3>  
-    </section>
-      <table class="current-projects">
-        <thead>
-          <tr><th id="name">Project Name</th><th id="number">Number</th><th id="start">Start Date</th><th id="status">Status</th></tr>
-        </thead>
-        <tbody>
-          <tr class="row">
-            <td>Project A</td>
-            <td>1</td>
-            <td class=>09/07/2021</td>
-            <td>In progress</td>
-          </tr>
-          <tr class="row"></tr>
-          <tr class="row"></tr>
-          <tr class="row"></tr>
-        </tbody>
-    <script src="./local_storage.js"></script>
+      <button id="mapsBtn">Check Location</button>
+      <div id="map">map goes here</div>
+    </div>
+     
     <script src="./check_weather.js"></script>
+    <script src="./maps_api.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBADATjURc7cEmUA4hj81mtPBsJUTsqSoo&callback=initMap&libraries=&v=weekly"
+    async
+  ></script>
   </body>
 </html>
