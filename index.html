@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+</head>
+<body>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <title>Stratum Project Management Application</title>
+
+    <ul id="header-buttons">
+
+        <li id="project"><button type="button">Add Project</button></li>
+
+        <li id="schedule"><a href="./Schedule/schedule.html" target="_blank"><button type="button">Schedule</button></a></li>
+
+        <li id="report"><a href="./Report/report.html" target="_blank"><button type="button">Report</button></a></li>
+
+        <li id="weather"><button type="button">Weather</button></li>
+
+        <li id="search" class=>
+            <label id="search-label">Search</label>
+            <input id="search-bar" placeholder="Project Num/Add..." rows="1"></input>
+        </li>
+
+    </ul>
+
+    <table style="width: 100%">
+        <tr class="tableHeaders">
+            <th>Project Number</th>
+
+            <th>Project Address</th>
+
+            <th>Start Date</th>
+
+            <th>
+                <label for="walk">Job Walked</label>
+                <select name="walk" id="walk">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </th>
+            
+            <th>Finished</th>
+
+            <th>
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="Green">Green</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Red">Red</option>
+                </select>
+            </th>
+
+        </tr>
+        <tr class="tableContents">
+            <td class="columnOne"></td>
+
+            <td class="columnTwo"></td>
+
+            <td class="columnThree"></td>
+
+            <td class="columnFour"></td>
+
+            <td class="columnFive"></td>
+
+            <td class="columnSix"></td>
+        </tr>
+
+    </table>
+    <script src="./assets/JavaScript/script.js"> </script>
+
+</body>
+</html>

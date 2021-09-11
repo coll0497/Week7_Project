@@ -1,0 +1,83 @@
+#header-buttons{
+    display: flex;
+    list-style-type: none;
+    
+    background-color: lightblue;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 80px;
+}
+button{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    cursor: pointer;
+}
+#project, #schedule, #report, #weather, #search{
+    width: 100%;
+    height: 2rem;
+    background-color: rgb(156, 206, 223);
+    border: 1px solid black;
+    text-align: center;
+}
+
+button:hover{
+    background-color: cadetblue;
+}
+
+#project{
+    
+    
+}
+
+#schedule{
+
+}
+a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+#report{  
+}
+
+#weather{
+
+}
+
+#search-label{
+    margin-bottom: .3rem;
+}
+
+#search{
+    
+}
+
+#search-bar{
+margin-top: .3rem;
+vertical-align: -6px;
+}
+
+
+.tableContents{
+    text-align: center;
+}
+
+header{
+    font: bolder;
+    text-align: center;
+}
+
+header h1{
+    font-size: 60px;
+}
+
+header h3{
+    font-size: 30px;
+
+}
