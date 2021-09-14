@@ -22,7 +22,7 @@ function myFunction() {
 // weather api 
 var current = document.getElementById('current');
 var forecast = document.getElementById('forecast');
-var fetchButton = $("#launchWeatherModal");
+var fetchButton = $("#launch-weather");
 var today = document.getElementById('today');
 var tomorrow = document.getElementById('tomorrow');
 function getApi() {
@@ -42,7 +42,6 @@ function getApi() {
           current.innerHTML = data.current.condition.text;
           forecast.innerHTML = data.forecast.forecastday[0].day.condition.text;
       })
-
   };
 
 // check weather button cals weather api and modal function
@@ -54,25 +53,22 @@ fetchButton.click(function() {
 
 $(".modal-close").click(function() {
    $(".modal").removeClass("is-active");
-});
+}); 
 
 
-
-
-
-/* add project modal script below
+/* add project modal script below */
 
 var addProject = $("#launchProject");
 
 
 addProject.click(function() {
-    $(".modal").addClass("is-active");
-  });
-  
-  
-  $(".modal-close").click(function() {
-     $(".modal").removeClass("is-active");
-  });
+  $(".project-modal").addClass("is-active");
+});
+
+
+$(".modal-close").click(function() {
+   $(".project-modal").removeClass("is-active");
+});
 
   // Get form, item, and wishlist
 var projectInfo = document.querySelector('#project-info');
@@ -121,23 +117,23 @@ if (saved) {
     columnTwo.innerHTML = saved;
     columnThree.innerHTML = saved;
     columnFive.innerHTML = saved;
-} */
+}
 
 
 
 
-/* function to set date to red if it is 36 hours past finish date
-var fdate = document.querySelector('#fdate');
+// function to set date to red if it is 36 hours past finish date
+/* var fdate = document.querySelector('#fdate');
 
 console.log(moment("not a real date").isValid());// false
 
 var hoursAgo = moment(fdate).startOf('hour').fromNow()
   console.log(hoursAgo)
 
-function changeRed (fdate); {
+function changeRed (fdate) {
 fdate.setAttribute("color:red");
 }
 
 if (hoursAgo > 36); {
- then changeRed(fdate);
+ .then changeRed(fdate);
 } */

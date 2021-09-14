@@ -1,5 +1,5 @@
 
-/* add project modal script below
+/* add project modal script below */
 
 var addProject = $("#launchProject");
 
@@ -60,7 +60,7 @@ if (saved) {
     columnTwo.innerHTML = saved;
     columnThree.innerHTML = saved;
     columnFive.innerHTML = saved;
-} */
+} 
 
 
 
