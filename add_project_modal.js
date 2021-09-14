@@ -1,3 +1,6 @@
+
+/* add project modal script below
+
 var addProject = $("#launchProject");
 
 
@@ -57,9 +60,13 @@ if (saved) {
     columnTwo.innerHTML = saved;
     columnThree.innerHTML = saved;
     columnFive.innerHTML = saved;
-}
+} */
 
-/* var fdate = document.querySelector('#fdate');
+
+
+
+/* function to set date to red if it is 36 hours past finish date
+var fdate = document.querySelector('#fdate');
 
 console.log(moment("not a real date").isValid());// false
 
@@ -67,7 +74,7 @@ var hoursAgo = moment(fdate).startOf('hour').fromNow()
   console.log(hoursAgo)
 
 function changeRed (fdate); {
-fdate.setAttribute(color, red);
+fdate.setAttribute("color:red");
 }
 
 if (hoursAgo > 36); {
