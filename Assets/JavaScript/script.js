@@ -22,7 +22,7 @@ function myFunction() {
 // weather api 
 var current = document.getElementById('current');
 var forecast = document.getElementById('forecast');
-var fetchButton = $("#launchModal");
+var fetchButton = $("#launchWeatherModal");
 var today = document.getElementById('today');
 var tomorrow = document.getElementById('tomorrow');
 function getApi() {

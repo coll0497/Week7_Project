@@ -91,3 +91,7 @@ header h3{
     font-size: 30px;
 
 }
+
+li {
+    list-style-type: none;
+}
