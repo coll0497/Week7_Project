@@ -19,48 +19,48 @@ function myFunction() {
   }
 // $(document).foundation()
 
-// weather api 
-var current = document.getElementById('current');
-var forecast = document.getElementById('forecast');
-var fetchButton = $("#launchWeatherModal");
-var today = document.getElementById('today');
-var tomorrow = document.getElementById('tomorrow');
-function getApi() {
-  fetch("https://weatherapi-com.p.rapidapi.com/forecast.json?q='San Antonio'&days=1", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
-		"x-rapidapi-key": "901cbaf60cmsh5e5bea7d5f1a8bap1edabajsn89697e7fb7b8"
-	}})
-    .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-          today.innerHTML = "Today's weather for San Antonio is ";
-          tomorrow.innerHTML = "Tomorrow's weather will be ";
-          current.innerHTML = data.current.condition.text;
-          forecast.innerHTML = data.forecast.forecastday[0].day.condition.text;
-      })
+// // weather api 
+// var current = document.getElementById('current');
+// var forecast = document.getElementById('forecast');
+// var fetchButton = $("#launchWeatherModal");
+// var today = document.getElementById('today');
+// var tomorrow = document.getElementById('tomorrow');
+// function getApi() {
+//   fetch("https://weatherapi-com.p.rapidapi.com/forecast.json?q='San Antonio'&days=1", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
+// 		"x-rapidapi-key": "901cbaf60cmsh5e5bea7d5f1a8bap1edabajsn89697e7fb7b8"
+// 	}})
+//     .then(function (response) {
+//         return response.json();
+//       })
+//       .then(function (data) {
+//         console.log(data);
+//           today.innerHTML = "Today's weather for San Antonio is ";
+//           tomorrow.innerHTML = "Tomorrow's weather will be ";
+//           current.innerHTML = data.current.condition.text;
+//           forecast.innerHTML = data.forecast.forecastday[0].day.condition.text;
+//       })
 
-  };
+//   };
 
-// check weather button cals weather api and modal function
-fetchButton.click(function() {
-  getApi();
-  $(".modal").addClass("is-active");
-});
-
-
-$(".modal-close").click(function() {
-   $(".modal").removeClass("is-active");
-});
+// // check weather button cals weather api and modal function
+// fetchButton.click(function() {
+//   getApi();
+//   $(".modal").addClass("is-active");
+// });
 
 
+// $(".modal-close").click(function() {
+//    $(".modal").removeClass("is-active");
+// });
 
 
 
-/* add project modal script below
+
+
+/* add project modal script below*/
 
 var addProject = $("#launchProject");
 
@@ -86,9 +86,10 @@ var columnTwo = document.querySelector('.columnTwo')
 var columnThree = document.querySelector('.columnThree')
 var columnFive = document.querySelector('.columnFive')
 var submit = document.querySelector('#submit')
+const timeStamp = 
+
 
 submit.addEventListener('click', function (event) {
-
 	// Don't submit the form
 	event.preventDefault();
 
@@ -98,7 +99,9 @@ submit.addEventListener('click', function (event) {
 	// Add item to project info
 	columnOne.innerHTML += '<li>' + pnumber.value + '</li>';
     columnTwo.innerHTML += '<li>' + address.value + '</li>';
+
     columnThree.innerHTML += '<li>' + sdate.value + '</li>';
+
     columnFive.innerHTML += '<li>' + fdate.value + '</li>';
 
 	// Clear input
@@ -121,23 +124,47 @@ if (saved) {
     columnTwo.innerHTML = saved;
     columnThree.innerHTML = saved;
     columnFive.innerHTML = saved;
-} */
+} 
 
 
 
+// For Rey
+localStorage.setItem(address.value, sdate.value)
 
-/* function to set date to red if it is 36 hours past finish date
-var fdate = document.querySelector('#fdate');
+//Create a function for the x button and submit button in modal.
+const submitBtn = $('#submit');
+const cancelBtn = $('#cancel');
+submitBtn.click(function(){
+  const sBtnValue = $(this).val()
+  const textValue = $(`#sdate-${sBtnValue}`)
+  console.log(sBtnValue)
+  console.log(textValue)
+})
 
-console.log(moment("not a real date").isValid());// false
+// Function for the submit button to work.
+$(function() {
+  $(submitBtn).click(function() {
+    $('.modal').removeClass('is-active');
+});
+});
 
-var hoursAgo = moment(fdate).startOf('hour').fromNow()
-  console.log(hoursAgo)
+// Function for the cancel button to work.
+$(function() {
+  $(cancelBtn).click(function() {
+    $('.modal').removeClass('is-active');
+});
+});
 
-function changeRed (fdate); {
-fdate.setAttribute("color:red");
-}
+/* function to set date to red if it is 36 hours past finish date*/
+var eraDate = document.querySelector('#fdate');
 
-if (hoursAgo > 36); {
- then changeRed(fdate);
-} */
+// Create a function so that when the Submit button was clicked, 
+// the time stamp is saved. 
+
+// Create a function for the job walked status and finished status.
+// Make the start date have a mandatory date styling to create conditionals
+// based on the hours from the timestamp
+
+// if timestamp <= 12 set class of finished status to green
+// if else timestamp <= 36 set class of finished status to yellow
+// if else time stamp <= 48 set class to red.
