@@ -18,35 +18,13 @@ function getApi() {
       })
       .then(function (data) {
         console.log(data);
-        //for (var i = 0; i < data.length; i++) {
-          //var current = document.createElement('h3');
-          //var forecast = document.createElement('h3');
-          today.innerHTML = "Today's weather for San Antonio is ";
-          tomorrow.innerHTML = "Tomorrow's weather will be ";
-          current.innerHTML = data.current.condition.text;
-          forecast.innerHTML = data.forecast.forecastday[0].day.condition.text;
+        today.innerHTML = "Today's weather for San Antonio is ";
+        tomorrow.innerHTML = "Tomorrow's weather will be ";
+        current.innerHTML = data.current.condition.text;
+      forecast.innerHTML = data.forecast.forecastday[0].day.condition.text;
       })
 
   };
-
-
-
-/* var btn = document.querySelector("myBtn");
-var modal = document.getElementById("myModal");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function () {
-  modal.style.display = "block";
-}
-
-span.onclick = function()  {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event)  {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-} */
 
 fetchButton.click(function() {
   getApi();

@@ -16,48 +16,87 @@
 <body>
     <ul id="header-buttons">
 
-        <li id="project"><button type="button">Add Project</button></li>
+        <li id="project"><button type="button" id="launchProject">Add Project</button></li>
+        <div id="modal" class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <div class="box">
+              <article class="media">
+                <div class="modal">
+                  <div class="modal-background"></div>
+                  <div class="modal-card">
+                    <header class="modal-card-head">
+                      <p class="modal-card-title">Add Project</p>
+                      <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                      <form id="project-info">
+                        <label for="pnumber">Project Number</label><br>
+                        <input type="text" class="project-item" id="pnumber" name="pnumber"><br>
+                        <label for="address">Project Address</label><br>
+                        <input type="text" class="project-item" id="address" name="address" placeholder="Street, City, and Zip Code"><br><br>
+                        <label for="sdate">Start Date</label><br>
+                        <input type="text" class="project-item" id="sdate" name="sdate" placeholder=""><br>
+                        <label for="fdate">Finish Date</label><br>
+                        <input type="text" class="project-item" id="fdate" name="fdate"><br><br>
+                      </form> 
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button id="submit">Submit</button>
+                        <button class="button is-danger">Cancel</button>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      
 
         <li id="schedule"><a href="./Schedule/schedule.html" target="_blank"><button type="button">Schedule</button></a></li>
 
         <li id="report"><a href="./Report/report.html" target="_blank"><button type="button">Report</button></a></li>
 
-        <li id="weather"><button type="button">Weather</button></li>
-        <!-- weather modal button 
-        <div id="modal" class="modal">
-            <div class="modal-background"></div>
+        <!-- <li id="weather"><button type="button">Weather</button></li> -->
+        
+       <!-- 
+         <div id="modal" class="modal">
+          <div class="modal-background"></div>
             <div class="modal-content">
               <div class="box">
                 <article class="media">
                   <div class="modal">
                     <div class="modal-background"></div>
-                    <div class="modal-card">
-                      <header class="modal-card-head">
-                        <p class="modal-card-title">Weather</p>
-                        <button class="delete" aria-label="close"></button>
-                      </header>
-                      <section class="modal-card-body">
-                        <p id="today"></p>
-                        <p id="current"></p>
-                        <p id="tomorrow"></p>
-                        <p id="forecast"></p>
-                      </section>
-                      <footer class="modal-card-foot">
-                        <button class="modal-close is-large" aria-label="close"></button>
-                      </footer>
+                      <div class="modal-card">
+                        <header class="modal-card-head">
+                          <p class="modal-card-title">Weather</p>
+                          <button class="delete" aria-label="close"></button>
+                        </header>
+                            <section class="modal-card-body">
+                              <p id="today"></p>
+                              <p id="current"></p>
+                              <p id="tomorrow"></p>
+                              <p id="forecast"></p>
+                            </section>
+                          <footer class="modal-card-foot">
+                            <button class="modal-close is-large" aria-label="close"></button>
+                          </footer>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </article>
               </div>
             </div>
           </div>
-          <button class="button is-link is-large" id="launchModal">Check Weather with Modal</button> -->
+        </div>
+          <button class="button is-link is-small" id="launchModal">Local Weather</button> -->
       
         <li id="search" class=>
             <input id="search-bar" placeholder="Project Num/Add..." rows="1"></input>
             <label for="search-bar" id="search-label"><button id="searchBtn">Search</button></label>
-            
+
         </li>
 
     </ul>
@@ -106,6 +145,7 @@
 
     </table>
     <script src="./assets/JavaScript/script.js"> </script>
+    <script src="./add_project_modal.js"> </script>
 
 </body>
 </html>
