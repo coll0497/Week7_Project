@@ -95,3 +95,20 @@ header h3{
 li {
     list-style-type: none;
 }
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#green{
+    background-color: green;
+}
+
+#red, #yellow, #green{
+    width: 100%;
+    height: 100%;
+}
