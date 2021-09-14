@@ -90,7 +90,6 @@ const timeStamp =
 
 
 submit.addEventListener('click', function (event) {
-  localStorage.setItem(address.value, sdate.value)
 	// Don't submit the form
 	event.preventDefault();
 
@@ -130,14 +129,39 @@ if (saved) {
 
 
 // For Rey
+localStorage.setItem(address.value, sdate.value)
 
 //Create a function for the x button and submit button in modal.
+const submitBtn = $('#submit');
+const cancelBtn = $('#cancel');
+submitBtn.click(function(){
+  const sBtnValue = $(this).val()
+  const textValue = $(`#sdate-${sBtnValue}`)
+  console.log(sBtnValue)
+  console.log(textValue)
+})
+
+// Function for the submit button to work.
+$(function() {
+  $(submitBtn).click(function() {
+    $('.modal').removeClass('is-active');
+});
+});
+
+// Function for the cancel button to work.
+$(function() {
+  $(cancelBtn).click(function() {
+    $('.modal').removeClass('is-active');
+});
+});
 
 /* function to set date to red if it is 36 hours past finish date*/
 var eraDate = document.querySelector('#fdate');
 
 // Create a function so that when the Submit button was clicked, 
 // the time stamp is saved. 
+
+// Create a function for the job walked status and finished status.
 // Make the start date have a mandatory date styling to create conditionals
 // based on the hours from the timestamp
 
