@@ -19,60 +19,57 @@ function myFunction() {
   }
 // $(document).foundation()
 
-// // weather api 
-// var current = document.getElementById('current');
-// var forecast = document.getElementById('forecast');
-// var fetchButton = $("#launchWeatherModal");
-// var today = document.getElementById('today');
-// var tomorrow = document.getElementById('tomorrow');
-// function getApi() {
-//   fetch("https://weatherapi-com.p.rapidapi.com/forecast.json?q='San Antonio'&days=1", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
-// 		"x-rapidapi-key": "901cbaf60cmsh5e5bea7d5f1a8bap1edabajsn89697e7fb7b8"
-// 	}})
-//     .then(function (response) {
-//         return response.json();
-//       })
-//       .then(function (data) {
-//         console.log(data);
-//           today.innerHTML = "Today's weather for San Antonio is ";
-//           tomorrow.innerHTML = "Tomorrow's weather will be ";
-//           current.innerHTML = data.current.condition.text;
-//           forecast.innerHTML = data.forecast.forecastday[0].day.condition.text;
-//       })
+// weather api 
+var current = document.getElementById('current');
+var forecast = document.getElementById('forecast');
+var fetchButton = $("#launch-weather");
+var today = document.getElementById('today');
+var tomorrow = document.getElementById('tomorrow');
+function getApi() {
+  fetch("https://weatherapi-com.p.rapidapi.com/forecast.json?q='San Antonio'&days=1", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
+		"x-rapidapi-key": "901cbaf60cmsh5e5bea7d5f1a8bap1edabajsn89697e7fb7b8"
+	}})
+    .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+          today.innerHTML = "Today's weather for San Antonio is ";
+          tomorrow.innerHTML = "Tomorrow's weather will be ";
+          current.innerHTML = data.current.condition.text;
+          forecast.innerHTML = data.forecast.forecastday[0].day.condition.text;
+      })
+  };
+
+// check weather button cals weather api and modal function
+fetchButton.click(function() {
+  getApi();
+  $(".modal").addClass("is-active");
+});
 
 //   };
 
-// // check weather button cals weather api and modal function
-// fetchButton.click(function() {
-//   getApi();
-//   $(".modal").addClass("is-active");
-// });
+$(".modal-close").click(function() {
+   $(".modal").removeClass("is-active");
+}); 
 
 
-// $(".modal-close").click(function() {
-//    $(".modal").removeClass("is-active");
-// });
-
-
-
-
-
-/* add project modal script below*/
+/* add project modal script below */
 
 var addProject = $("#launchProject");
 
 
 addProject.click(function() {
-    $(".modal").addClass("is-active");
-  });
-  
-  
-  $(".modal-close").click(function() {
-     $(".modal").removeClass("is-active");
-  });
+  $(".project-modal").addClass("is-active");
+});
+
+
+$(".modal-close").click(function() {
+   $(".project-modal").removeClass("is-active");
+});
 
   // Get form, item, and wishlist
 var projectInfo = document.querySelector('#project-info');
