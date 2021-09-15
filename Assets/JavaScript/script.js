@@ -142,16 +142,6 @@ var fDateSaved = localStorage.getItem('fdate');
 columnFive.innerHTML = fDateSaved;
 
 
-// const yes = document.querySelector('#Yes');
-// const no = document.querySelector('#No');
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
-
-today = yyyy + '-' + mm + '-' + dd;
-console.log(today)
-
 
 /* function to set date to red if it is 36 hours past finish date*/
 
