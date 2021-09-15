@@ -77,10 +77,12 @@ var pnumber = document.querySelector('#pnumber');
 var address = document.querySelector('#address');
 var sdate = document.querySelector('#sdate');
 var fdate = document.querySelector('#fdate');
+const walked = document.querySelector('#walked');
 var projectItem = document.querySelector('.project-item');
 var columnOne = document.querySelector('.columnOne');
 var columnTwo = document.querySelector('.columnTwo');
 var columnThree = document.querySelector('.columnThree');
+const columnFour = document.querySelector('.columnFour');
 var columnFive = document.querySelector('.columnFive');
 var submit = document.querySelector('#submit');
 
@@ -95,20 +97,20 @@ submit.addEventListener('click', function (event) {
 
 	// Add item to project info
 	columnOne.innerHTML += '<li>' + pnumber.value + '</li>';
-    columnTwo.innerHTML += '<li>' + address.value + '</li>';
-
-    columnThree.innerHTML += '<li>' + sdate.value + '</li>';
-
-    columnFive.innerHTML += '<li>' + fdate.value + '</li>';
+  columnTwo.innerHTML += '<li>' + address.value + '</li>';
+  columnThree.innerHTML += '<li>' + sdate.value + '</li>';
+  columnFour.innerHTML += '<li>' + walked.value + '</li>';
+  columnFive.innerHTML += '<li>' + fdate.value + '</li>';
 
 	// Clear input
 	projectItem.value = '';
 
 	// Save the list to localStorage
 	localStorage.setItem('pnumber', columnOne.innerHTML);
-    localStorage.setItem('address', columnTwo.innerHTML);
-    localStorage.setItem('sdate', columnThree.innerHTML);
-    localStorage.setItem('fdate', columnFive.innerHTML);
+  localStorage.setItem('address', columnTwo.innerHTML);
+  localStorage.setItem('sdate', columnThree.innerHTML);
+  localStorage.setItem('fdate', columnFive.innerHTML);
+  localStorage.setItem('walked', columnFour.innerHTML);
 
 }, false);
 // Submit and cancel functions
@@ -134,12 +136,21 @@ var addressSaved = localStorage.getItem('address');
 columnTwo.innerHTML = addressSaved;
 var sDateSaved = localStorage.getItem('sdate');
 columnThree.innerHTML = sDateSaved;
+var walkedSaved = localStorage.getItem('walked');
+columnFour.innerHTML = walkedSaved;
 var fDateSaved = localStorage.getItem('fdate');
 columnFive.innerHTML = fDateSaved;
 
 
-// If there are any saved items, update our list
+// const yes = document.querySelector('#Yes');
+// const no = document.querySelector('#No');
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
 
+today = yyyy + '-' + mm + '-' + dd;
+console.log(today)
 
 
 /* function to set date to red if it is 36 hours past finish date*/

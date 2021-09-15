@@ -100,15 +100,15 @@ li {
     background-color: red;
 }
 
-#yellow{
+.yellow{
     background-color: yellow;
 }
 
-#green{
+.green{
     background-color: green;
 }
 
-#red, #yellow, #green{
+.red, .yellow, .green{
     width: 100%;
     height: 100%;
 }

@@ -31,13 +31,22 @@
                     <section class="modal-card-body">
                       <form id="project-info">
                         <label for="pnumber">Project Number</label><br>
-                        <input type="text" class="project-item" id="pnumber" name="pnumber"><br>
+                        <input type="text" class="project-item" id="pnumber" name="pnumber"><br><br>
                         <label for="address">Project Address</label><br>
                         <input type="text" class="project-item" id="address" name="address" placeholder="Street, City, and Zip Code"><br><br>
+                        
                         <label for="sdate">Start Date</label><br>
-                        <input type="text" class="project-item" id="sdate" name="sdate" placeholder=""><br>
-                        <label for="fdate">Finish Date</label><br>
-                        <input type="text" class="project-item" id="fdate" name="fdate"><br><br>
+                        <input type="date" class="project-item" id="sdate" name="sdate" placeholder="MM/DD/YYYY"><br><br>
+                        
+                        <label for="walked">Was Job Walked?</label><br>
+                        <select class="project-item" id="walked" name="walked">
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
+                        </select><br><br>
+
+                        <label for="fdate">Expected Finish Date</label><br>
+                        <input type="date" class="project-item" id="fdate" name="fdate" placeholder="MM/DD/YYYY"><br><br>
+                      
                       </form> 
                     </section>
                     <footer class="modal-card-foot">
@@ -100,7 +109,7 @@
 
     <table style="width: 100%">
         <tr class="tableHeaders">
-            <th>Project Number</th>
+            <th>placProject Number</th>
 
             <th>Project Address</th>
 
@@ -108,28 +117,28 @@
 
             <th>
                 <label for="walk">Job Walked</label>
-                <select name="walk" id="walk">
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
+                <!-- <select name="walk" id="walk">
+                    <option id="Yes" value="Yes">Yes</option>
+                    <option id="No" value="No">No</option>
+                </select> -->
             </th>
             
-            <th>Finished</th>
+            <th>Expected Finish Date</th>
 
-            <th>
+            <!-- <th>
                 <label for="status">Status</label>
                 <select name="status" id="status">
                     <option value="Green">Green</option>
                     <option value="Yellow">Yellow</option>
                     <option value="Red">Red</option>
                 </select>
-            </th>
+            </th> -->
 
         </tr>
         <tr id="tableContents" class="tableContents">
             <td class="columnOne"><a href="#"></a></td>
 
-            <td class="columnTwo"><a href="#"></a></a></td>
+            <td class="columnTwo"><a href="#"></a></td>
 
             <td class="columnThree"><a href="#"></a></td>
 
@@ -137,7 +146,7 @@
 
             <td class="columnFive"><a href="#"></a></td>
 
-            <td id="jobWalk" class="columnSix"><a href="#"></a></td>
+            <td class="columnSix"><a href="#"></a></td>
         </tr>
 
     </table>
