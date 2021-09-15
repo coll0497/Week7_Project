@@ -81,12 +81,12 @@ var address = document.querySelector('#address');
 var sdate = document.querySelector('#sdate');
 var fdate = document.querySelector('#fdate');
 var projectItem = document.querySelector('.project-item');
-var columnOne = document.querySelector('.columnOne')
-var columnTwo = document.querySelector('.columnTwo')
-var columnThree = document.querySelector('.columnThree')
-var columnFive = document.querySelector('.columnFive')
-var submit = document.querySelector('#submit')
-const timeStamp = 
+var columnOne = document.querySelector('.columnOne');
+var columnTwo = document.querySelector('.columnTwo');
+var columnThree = document.querySelector('.columnThree');
+var columnFive = document.querySelector('.columnFive');
+var submit = document.querySelector('#submit');
+
 
 
 submit.addEventListener('click', function (event) {
@@ -114,49 +114,38 @@ submit.addEventListener('click', function (event) {
     localStorage.setItem('fdate', columnFive.innerHTML);
 
 }, false);
-
-// Check for saved project items
-var saved = localStorage.getItem('projectItem');
-
-// If there are any saved items, update our list
-if (saved) {
-	columnOne.innerHTML = saved;
-    columnTwo.innerHTML = saved;
-    columnThree.innerHTML = saved;
-    columnFive.innerHTML = saved;
-} 
-
-
-
-// For Rey
-localStorage.setItem(address.value, sdate.value)
-
-//Create a function for the x button and submit button in modal.
+// Submit and cancel functions
 const submitBtn = $('#submit');
 const cancelBtn = $('#cancel');
-submitBtn.click(function(){
-  const sBtnValue = $(this).val()
-  const textValue = $(`#sdate-${sBtnValue}`)
-  console.log(sBtnValue)
-  console.log(textValue)
-})
 
-// Function for the submit button to work.
+
 $(function() {
-  $(submitBtn).click(function() {
-    $('.modal').removeClass('is-active');
-});
+  // Function for the submit button to work.
+    $(submitBtn).click(function() {
+      $('.modal').removeClass('is-active');
+      // Function for the cancel button to work.
+      $(cancelBtn).click(function() {
+        $('.modal').removeClass('is-active');
+      })
+    })
 });
 
-// Function for the cancel button to work.
-$(function() {
-  $(cancelBtn).click(function() {
-    $('.modal').removeClass('is-active');
-});
-});
+// Check for saved project items
+var pNumberSaved = localStorage.getItem('pnumber');
+columnOne.innerHTML = pNumberSaved;
+var addressSaved = localStorage.getItem('address');
+columnTwo.innerHTML = addressSaved;
+var sDateSaved = localStorage.getItem('sdate');
+columnThree.innerHTML = sDateSaved;
+var fDateSaved = localStorage.getItem('fdate');
+columnFive.innerHTML = fDateSaved;
+
+
+// If there are any saved items, update our list
+
+
 
 /* function to set date to red if it is 36 hours past finish date*/
-var eraDate = document.querySelector('#fdate');
 
 // Create a function so that when the Submit button was clicked, 
 // the time stamp is saved. 
@@ -167,4 +156,4 @@ var eraDate = document.querySelector('#fdate');
 
 // if timestamp <= 12 set class of finished status to green
 // if else timestamp <= 36 set class of finished status to yellow
-// if else time stamp <= 48 set class to red.
+// if else time stamp <= 48 set class to 
