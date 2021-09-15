@@ -17,12 +17,12 @@
     <ul id="header-buttons">
 
         <li id="project"><button type="button" id="launchProject">Add Project</button></li>
-        <div id="modal" class="modal">
+        <div id="modal" class="modal project-modal">
           <div class="modal-background"></div>
           <div class="modal-content">
             <div class="box">
               <article class="media">
-                <div class="modal">
+                <div class="modal project-modal">
                   <div class="modal-background"></div>
                   <div class="modal-card">
                     <header class="modal-card-head">
@@ -67,15 +67,12 @@
 
         <li id="report"><a href="./Report/report.html" target="_blank"><button type="button">Report</button></a></li>
 
-        <!-- <li id="weather"><button type="button">Weather</button></li> -->
-        
-       <!-- 
-         <div id="modal" class="modal">
+      <div id="modal" class="modal weather-modal">
           <div class="modal-background"></div>
             <div class="modal-content">
               <div class="box">
                 <article class="media">
-                  <div class="modal">
+                  <div class="modal weather-modal">
                     <div class="modal-background"></div>
                       <div class="modal-card">
                         <header class="modal-card-head">
@@ -89,7 +86,7 @@
                               <p id="forecast"></p>
                             </section>
                           <footer class="modal-card-foot">
-                            <button class="modal-close is-large" aria-label="close"></button>
+                          <button class="modal-close is-large" aria-label="close"></button>
                           </footer>
                       </div>
                     </div>
@@ -99,7 +96,8 @@
             </div>
           </div>
         </div>
-          <button class="button is-link is-small" id="launchModal">Local Weather</button> -->
+      <button class="button is-link is-small" id="launch-weather">Local Weather</button>
+  
       
         <!-- <li id="search" class=>
             <input id="search-bar" placeholder="Project Num/Add..." rows="1"></input>
@@ -153,7 +151,7 @@
 
     </table>
     <script src="./assets/JavaScript/script.js"> </script>
-    <script src="./add_project_modal.js"> </script>
+    <!-- <script src="./add_project_modal.js"> </script> -->
 
 </body>
 </html>
